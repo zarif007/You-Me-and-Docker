@@ -4,8 +4,6 @@
 A simple basic introduction to Docker in node.js
 
 
-
-
 ## Creating a Node Image
 
 In the project directory create a file name Dockerfile. This file will contain independent image 
@@ -98,11 +96,27 @@ Using cashed results of the 5 layers
 ```
     docker image rm <IMAGE ID>
 ```
+
 ## Running an Image
 ```
-    docker run -d --name <Container Name> <IMAGE Name>
+    docker run -p 4000:5000 -d --name <Container Name> <IMAGE Name>
 
     => -d for detouching our container from the CLI 
     => --name <Container Name> for giving this container a name
     => <IMAGE Name> is the name of the image, we want to run
+    => -p 4000:5000, the 5000 refering that out app is running on port 
+        5000 and the 4000 (Can be any valid port number) means, if any 
+        request comes to the port 4000, the request will be forwarded to
+        the Docker container
+```
+![App Screenshot](https://i.ibb.co/LRPxnbT/dc4.png)
+
+## List of running containers
+```
+    docker ps
+```
+
+## Deleting a container
+```
+    docker rm <Container Name> -f
 ```
