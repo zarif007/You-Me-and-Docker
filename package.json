@@ -1,0 +1,23 @@
+{
+  "name": "You-Me-and-Docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zarif007/You-Me-and-Docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zarif007/You-Me-and-Docker/issues"
+  },
+  "homepage": "https://github.com/zarif007/You-Me-and-Docker#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
