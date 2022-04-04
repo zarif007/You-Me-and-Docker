@@ -1,6 +1,6 @@
 # You Me and Docker 🐳
 
-A simple basic introduction to Docker in node.js
+A simple basic introduction to Docker in node.js w express.js and redis
 
 ![Logo](https://logos-world.net/wp-content/uploads/2021/02/Docker-Logo-2015-2017.png)
 
