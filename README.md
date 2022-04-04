@@ -49,7 +49,7 @@ Here every step is called image layer, in this image we have 5 layers.
 ```
   COPY . ./
 
-  => Coping source codes and files yo the image
+  => Coping source codes and files to the image
   => The first . refers everyfile of our app
   => And the 2nd part ./ refers, everything will be copied to /app directory
 ```
