@@ -80,7 +80,7 @@ This provides better optimization.
 
 
 ## At the first build
-Installing all the 5 layers
+Ruuning all the 5 layers
 
 ![App Screenshot](https://i.ibb.co/G5t5KbC/dc3.jpg)
 
