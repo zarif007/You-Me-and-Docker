@@ -70,7 +70,7 @@ Port and initial command
 
 # Building the Docker Container
 ```
-  docker build .
+  docker build -t <Image Name> .
 ```
 
 At the first build, It will run all the layers independently and install required dependencies but 
@@ -89,3 +89,20 @@ Using cashed results of the 5 layers
 
 ![App Screenshot](https://i.ibb.co/yn1NStg/dc2.png)
 
+## List of all images
+```
+    docker image ls
+```
+
+## Deleting an Image
+```
+    docker image rm <IMAGE ID>
+```
+## Running an Image
+```
+    docker run -d --name <Container Name> <IMAGE Name>
+
+    => -d for detouching our container from the CLI 
+    => --name <Container Name> for giving this container a name
+    => <IMAGE Name> is the name of the image, we want to run
+```
