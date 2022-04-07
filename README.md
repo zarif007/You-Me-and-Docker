@@ -120,3 +120,22 @@ Using cashed results of the 5 layers
 ```
     docker rm <Container Name> -f
 ```
+
+## Accessing to the docker container
+```
+  docker exec -it <Container Name> bash
+  => it for interactice mode
+  => bash for viewing the file system
+
+  ls 
+  => To view all the files
+
+  exit
+  => For exiting from the directory
+```
+
+## Limiting files from the container
+Just like .gitignore(avoid files to be pushed 
+into our git repo) docker has .dockerignore file.
+Works same as .gitignore, we need specify file 
+name to the .dockerignore file 
