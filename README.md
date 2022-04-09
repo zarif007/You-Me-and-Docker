@@ -99,6 +99,7 @@ Using cashed results of the 5 layers
     docker image rm IMAGE ID>
 ```
 
+
 ## Running/deploying an Image
 ```
     docker run -p 4000:5000 -v LocalmachinePath:ContainerPath:ro -v /app/node_modules -d --name Container_Name IMAGE_Name
