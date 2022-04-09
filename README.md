@@ -90,20 +90,27 @@ Using cashed results of the 5 layers
 ## List of all images
 ```
     docker image ls
+    => Currently Running
 ```
+
 
 ## Deleting an Image
 ```
     docker image rm <IMAGE ID>
 ```
 
-## Running an Image
+## Running/deploying an Image
 ```
-    docker run -p 4000:5000 -d --name <Container Name> <IMAGE Name>
+    docker run -p 4000:5000 -v <LocalmachinePath>:<ContainerPath> -d --name <Container Name> <IMAGE Name>
 
     => -d for detouching our container from the CLI 
     => --name <Container Name> for giving this container a name
     => <IMAGE Name> is the name of the image, we want to run
+    => -v LocalmachinePath:ContainerPath is for Bind Mount. 
+        Bind mount is a   volume that helps to sync local repo 
+        with the docker container that gives the advantage of not
+        deploying our container every time, we change something on 
+        our file/code. 
     => -p 4000:5000, the 5000 refering that our app is running on port 
         5000 and the 4000 (Can be any valid port number) means, if any 
         request comes to the port 4000, the request will be forwarded to
@@ -114,6 +121,10 @@ Using cashed results of the 5 layers
 ## List of running containers
 ```
     docker ps
+```
+```
+    docker ps -a
+    => All containers (Deleted/Running)
 ```
 
 ## Deleting a container
@@ -126,10 +137,19 @@ Using cashed results of the 5 layers
   docker exec -it <Container Name> bash
   => it for interactice mode
   => bash for viewing the file system
+```
 
+```
   ls 
   => To view all the files
+```
 
+```
+  cat <file name> 
+  => Viewing content of the file
+```
+
+````
   exit
   => For exiting from the directory
 ```
@@ -139,3 +159,4 @@ Just like .gitignore(avoid files to be pushed
 into our git repo) docker has .dockerignore file.
 Works same as .gitignore, we need specify file 
 name to the .dockerignore file 
+
