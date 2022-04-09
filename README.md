@@ -127,6 +127,11 @@ Using cashed results of the 5 layers
     => All containers (Deleted/Running)
 ```
 
+## Info of a container
+```
+  docker logs <Container name>
+```
+
 ## Deleting a container
 ```
     docker rm <Container Name> -f
@@ -149,7 +154,7 @@ Using cashed results of the 5 layers
   => Viewing content of the file
 ```
 
-````
+```
   exit
   => For exiting from the directory
 ```
