@@ -101,7 +101,7 @@ Using cashed results of the 5 layers
 
 ## Running/deploying an Image
 ```
-    docker run -p 4000:5000 -v LocalmachinePath:ContainerPath -d --name Container_Name IMAGE_Name
+    docker run -p 4000:5000 -v LocalmachinePath:ContainerPath:ro -v /app/node_modules -d --name Container_Name IMAGE_Name
 
     => -d for detouching our container from the CLI 
     => --name Container_Name for giving this container a name
@@ -110,7 +110,9 @@ Using cashed results of the 5 layers
         Bind mount is a   volume that helps to sync local repo 
         with the docker container that gives the advantage of not
         deploying our container every time, we change something on 
-        our file/code. 
+        our file/code. :ro stands for read only file system. If you want 
+        a read, write, edit and delete only file system, remove :ro from there.
+    => -v /app/node_modules is for avoiding over writing node_modules file
     => -p 4000:5000, the 5000 refering that our app is running on port 
         5000 and the 4000 (Can be any valid port number) means, if any 
         request comes to the port 4000, the request will be forwarded to
