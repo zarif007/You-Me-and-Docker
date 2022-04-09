@@ -68,7 +68,7 @@ Port and initial command
 
 # Building the Docker Container
 ```
-  docker build -t <Image Name> .
+  docker build -t Image_Name .
 ```
 
 At the first build, It will run all the layers independently and install required dependencies but 
@@ -96,16 +96,16 @@ Using cashed results of the 5 layers
 
 ## Deleting an Image
 ```
-    docker image rm <IMAGE ID>
+    docker image rm IMAGE ID>
 ```
 
 ## Running/deploying an Image
 ```
-    docker run -p 4000:5000 -v <LocalmachinePath>:<ContainerPath> -d --name <Container Name> <IMAGE Name>
+    docker run -p 4000:5000 -v LocalmachinePath:ContainerPath -d --name Container_Name IMAGE_Name
 
     => -d for detouching our container from the CLI 
-    => --name <Container Name> for giving this container a name
-    => <IMAGE Name> is the name of the image, we want to run
+    => --name Container_Name for giving this container a name
+    => IMAGE_Name is the name of the image, we want to run
     => -v LocalmachinePath:ContainerPath is for Bind Mount. 
         Bind mount is a   volume that helps to sync local repo 
         with the docker container that gives the advantage of not
@@ -129,17 +129,17 @@ Using cashed results of the 5 layers
 
 ## Info of a container
 ```
-  docker logs <Container name>
+  docker logs Container_name
 ```
 
 ## Deleting a container
 ```
-    docker rm <Container Name> -f
+    docker rm Container_Name -f
 ```
 
 ## Accessing to the docker container
 ```
-  docker exec -it <Container Name> bash
+  docker exec -it Container_Name bash
   => it for interactice mode
   => bash for viewing the file system
 ```
@@ -150,7 +150,7 @@ Using cashed results of the 5 layers
 ```
 
 ```
-  cat <file name> 
+  cat file_Name 
   => Viewing content of the file
 ```
 
